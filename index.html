@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absensi Komunitas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Memastikan transisi antar halaman halus */
+        .hidden { display: none !important; }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <div id="page1" class="h-screen w-full relative flex items-center justify-center overflow-hidden">
+        
+        <div class="absolute inset-0 z-0 flex flex-col w-full h-full">
+            <div class="flex-1 w-full bg-cover bg-center bg-no-repeat opacity-40" 
+                 style="background-image: url('gambar1.jpg');"></div>
+            <div class="flex-1 w-full bg-cover bg-center bg-no-repeat opacity-40" 
+                 style="background-image: url('gambar2.jpg');"></div>
+            <div class="flex-1 w-full bg-cover bg-center bg-no-repeat opacity-40" 
+                 style="background-image: url('gambar3.jpg');"></div>
+        </div>
+
+        <div class="relative z-10 flex items-center justify-center">
+            <div class="absolute z-0 opacity-80 animate-pulse" 
+                 style="background-image: url('logo.png'); 
+                        background-size: contain; 
+                        background-repeat: no-repeat; 
+                        background-position: center;
+                        width: 480px; height: 480px;">
+            </div>
+
+            <div class="relative z-20 bg-white/80 backdrop-blur-md p-10 rounded-3xl shadow-2xl text-center max-w-sm mx-4 border border-white/50">
+                <h1 class="text-3xl font-extrabold text-gray-900 mb-3">Selamat Datang!</h1>
+                <p class="text-gray-700 mb-8 leading-relaxed">Silakan isi daftar kehadiran untuk komunitas kami hari ini.</p>
+                <button onclick="goToPage2()" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-4 px-10 rounded-xl transition duration-300 w-full shadow-lg transform hover:scale-105">
+                    Masuk Ke Absensi
+                </button>
+                <div class="flex justify-center gap-6 border-t border-gray-200 pt-6">
+        <a href="https://instagram.com/krapyakpedulisampah" target="_blank" class="hover:scale-110 transition duration-300">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" class="w-8 h-8" alt="Instagram">
+        </a>
+
+        <a href="https://tiktok.com/@krapyakpedulisampah" target="_blank" class="hover:scale-110 transition duration-300">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/016/716/450/small_2x/tiktok-icon-free-png.png" class="w-8 h-8" alt="TikTok">
+        </a>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="page2" class="hidden min-h-screen w-full flex items-center justify-center p-4 bg-gray-200">
+    <div class="w-full max-w-md">
+        
+        <div class="flex justify-center mb-6">
+            <img src="logo.png" alt="Logo" class="w-20 h-20 object-contain rounded-full shadow-sm bg-white p-1">
+        </div>
+
+        <div class="bg-white w-full p-8 rounded-2xl shadow-xl relative z-50">
+            <h2 class="text-xl font-bold mb-6 text-center text-gray-800">Formulir Kehadiran</h2>
+            
+            <form id="absensiForm" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Nama Lengkap</label>
+                    <input type="text" name="nama" required class="mt-1 block w-full border border-gray-300 rounded-md p-2 shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Nama Instansi</label>
+                    <input type="text" name="instansi" required class="mt-1 block w-full border border-gray-300 rounded-md p-2 shadow-sm">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Alamat</label>
+                    <textarea name="alamat" required class="mt-1 block w-full border border-gray-300 rounded-md p-2 shadow-sm"></textarea>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Nomor Handphone</label>
+                    <input type="tel" name="nohp" required class="mt-1 block w-full border border-gray-300 rounded-md p-2 shadow-sm">
+                </div>
+                
+                <button type="submit" id="btnSubmit" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-lg transition shadow-md">
+                    Kirim Kehadiran
+                </button>
+            </form>
+
+            <div class="mt-8 pt-6 border-t border-gray-100">
+                <p class="text-center text-xs text-gray-400 mb-3 uppercase tracking-widest font-semibold">Ikuti Kami</p>
+                <div class="flex justify-center space-x-6">
+                    <a href="https://instagram.com/krapyakpedulisampah" target="_blank" class="flex items-center space-x-2 text-pink-600 hover:text-pink-700 transition">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        <span class="text-sm font-medium">Instagram</span>
+                    </a>
+                    <a href="https://tiktok.com/@krapyakpedulisampa" target="_blank" class="flex items-center space-x-2 text-gray-900 hover:text-black transition">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.17-2.86-.6-4.12-1.31a6.34 6.34 0 0 1-1.39-1.01c-.13 3.82-.16 7.65-.16 11.47 0 1.4-.2 2.82-.87 4.07-.81 1.58-2.34 2.73-4.04 3.12-1.71.42-3.6.3-5.12-.58-1.75-.98-2.88-2.87-2.89-4.89-.01-1.42.34-2.86 1.15-4.04.83-1.25 2.1-2.18 3.51-2.5 1.13-.27 2.31-.22 3.44.08v4.05c-1.02-.34-2.22-.38-3.14.28-.75.52-1.11 1.47-1.01 2.37.1 1.17 1.05 2.14 2.22 2.18 1.24.04 2.4-.85 2.62-2.05.08-.43.1-.87.1-1.31V0l.01.02z"/></svg>
+                        <span class="text-sm font-medium">TikTok</span>
+                    </a>
+                </div>
+            </div>
+
+            <button type="button" onclick="location.reload()" class="w-full mt-4 text-xs text-gray-400 hover:text-gray-600 transition text-center italic">
+                Kembali ke Beranda
+            </button>
+        </div>
+    </div>
+</div>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxxkWlBlWgdrgKQgZGRE_0pq7husS4sqGhOqpZDoo_dtfpT4yHYdCZ89ckVpxG0zdoJ/exec';
+
+        function goToPage2() {
+            // Sembunyikan Page 1, Tampilkan Page 2
+            document.getElementById('page1').classList.add('hidden');
+            document.getElementById('page2').classList.remove('hidden');
+            // Tambahkan ini agar layar scroll ke atas
+            window.scrollTo(0, 0);
+        }
+
+        document.getElementById('absensiForm').addEventListener('submit', e => {
+            e.preventDefault();
+            const btn = document.getElementById('btnSubmit');
+            btn.disabled = true;
+            btn.innerText = 'Mengirim...';
+
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData.entries());
+
+            fetch(scriptURL, {
+                method: 'POST',
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                alert('Terima kasih! Kehadiran Anda telah dicatat.');
+                location.reload(); 
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+                alert('Terjadi kesalahan saat mengirim data. Cek koneksi internet.');
+                btn.disabled = false;
+                btn.innerText = 'Kirim Kehadiran';
+            });
+        });
+    </script>
+</body>
+</html>
